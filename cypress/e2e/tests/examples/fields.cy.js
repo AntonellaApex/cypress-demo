@@ -44,8 +44,8 @@ describe("Test cases with field: Severity", () => {
     expect(true).to.equal(true);
   });
 
-  it("Severity = critical", () => {
-    qase.fields({ severity: "critical" });
+  it("Severity = critical-p0", () => {
+    qase.fields({ severity: "critical-p0" });
     expect(true).to.equal(true);
   });
 

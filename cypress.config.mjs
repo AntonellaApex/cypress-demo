@@ -1,4 +1,5 @@
 import { defineConfig } from "cypress";
+import { afterSpecHook } from "cypress-qase-reporter/hooks";
 import qasePlugin from "cypress-qase-reporter/plugin";
 import qaseMetadata from "cypress-qase-reporter/metadata";
 
@@ -29,6 +30,8 @@ export default defineConfig({
             framework: {
                 cypress: {
                     screenshotsFolder: 'cypress/screenshots',
+                    videosFolder: 'cypress/videos',
+                    uploadDelay: 10,
                 }
             }
           */
@@ -40,6 +43,9 @@ export default defineConfig({
     setupNodeEvents(on, config) {
       qasePlugin(on, config);
       qaseMetadata(on);
+      on("after:spec", async (spec, results) => {
+        await afterSpecHook(spec, config);
+      });
     },
   },
 });
