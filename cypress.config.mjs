@@ -8,24 +8,18 @@ export default defineConfig({
   reporterOptions: {
     reporterEnabled: "cypress-qase-reporter",
     cypressQaseReporterReporterOptions: {
-      /*
-            // You can define the reporter options here, or in a separate `qase.config.json` file.
-
             mode: 'testops',
             debug: false,
             testops: {
               api: {
-                token: 'api_key',
+                token: 'API_TOKEN',
               },
-              project: 'project_code',
+              project: 'PROJECT',
               uploadAttachments: true,
               run: {
-              //  id: 1,
-                title: "Your test run title",
-                description: "Cypress Automated Test run",
+                title: "Sample Test Run",
                 complete: true,
               },
-              environment: 'prod',
             },
             framework: {
                 cypress: {
@@ -34,7 +28,6 @@ export default defineConfig({
                     uploadDelay: 10,
                 }
             }
-          */
     },
   },
   video: true,
