@@ -8,7 +8,7 @@
     "test": "cypress/e2e/tests"
   },
   "scripts": {
-    "test": "QASE_MODE=testops npx cypress run --spec cypress/e2e/tests/examples",
+    "test": "QASE_MODE=testops npx cypress run --spec cypress/e2e/tests/examples/id.cy.js",
     "test:qase": "QASE_MODE=testops QASE_TESTOPS_API_TOKEN=your_api_token_here QASE_PROJECT_CODE=your_project_code_here npx cypress run --spec cypress/e2e/tests/examples"
   },
   "repository": {
