@@ -1,9 +1,12 @@
 import { qase } from "cypress-qase-reporter/mocha";
 
-/* Delete line, to uncomment 
+
 // Please, change the Ids in the following tests to valid ids from your Qase project.
  
 describe('Example: id.cy.js', () => {
+  beforeEach(() => {
+      cy.findByText("Search Grid").click();
+  });
 
   qase(1,
     it('Result will be posted against the specified test in Qase', () => {
@@ -22,7 +25,4 @@ describe('Example: id.cy.js', () => {
       expect(true).to.equal(true);
     })
   );
-
 });
-
-*/ // Delete line, to uncomment
